@@ -1,0 +1,9 @@
+0. Create a server [server.js];
+1. Initialize express app [app.js];
+2. Connect to the Database (MongoDB) [mongo];
+3. Create getCollection function for collection (optional) [model.js];
+4. Create schema with validation and create/update collection and also  create database indexes [schema.js]];
+    - create validator schema for collection
+    - collect list of collection
+    - if collection then update collection with validator, else create new collection;
+    - create indexes for collection
