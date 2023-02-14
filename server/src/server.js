@@ -6,6 +6,8 @@ const PORT = 4000;
 const setup = async () => {
     const { updateSchema } = require("./modules/models/video/schema");
     await updateSchema();
+    const { setupRoutes } = await require("./modules/models/video/controller");
+    setupRoutes(app);
 };
 
 app.listen(PORT, async () => {
@@ -14,7 +16,7 @@ app.listen(PORT, async () => {
     await setup();
 
     app.use("/", (req, res) => {
-        res.send(`Don't match any routes`);
+        res.send(`Don't with match any routes`);
     });
 
     console.log(`Application setup completed successfully`);
